@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanbok Flame | Authentic Korean Cuisine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+        }
+        .hero-section {
+            background-image: url('https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+        .menu-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #991b1b;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-red-800/10">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 border-2 border-red-800 rounded-full flex items-center justify-center bg-red-50/50">
+                        <span class="text-lg text-red-800 font-bold">韓</span>
+                    </div>
+                    <span class="text-2xl font-bold text-red-800">Hanbok Flame</span>
+                </a>
+                <div class="hidden md:flex items-center">
+                    <div class="h-8 w-px bg-red-800/10 mx-6"></div>
+                    <div class="flex space-x-2">
+                        <a href="#" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Home</a>
+                        <a href="#menu" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Menu</a>
+                        <a href="#about" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">About</a>
+                        <a href="#contact" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative text-center text-white z-10">
+            <div class="flex items-center justify-center gap-8 mb-6">
+                <div class="w-32 h-32 border-2 border-white/30 rounded-full flex items-center justify-center transform -rotate-12">
+                    <div class="w-28 h-28 border-2 border-white rounded-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                        <span class="text-4xl">한</span>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold relative">
+                    Hanbok Flame
+                    <div class="absolute -top-6 left-0 right-0 h-1 bg-repeat-x opacity-60" style="background-image: url('data:image/svg+xml,%3Csvg width=%2224%22 height=%224%22 viewBox=%220 0 24 4%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M0 2L6 0L12 2L18 0L24 2V4H0V2Z%22 fill=%22white%22/%3E%3C/svg%3E');"></div>
+                    <div class="absolute -bottom-6 left-0 right-0 h-1 bg-repeat-x opacity-60" style="background-image: url('data:image/svg+xml,%3Csvg width=%2224%22 height=%224%22 viewBox=%220 0 24 4%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M0 2L6 4L12 2L18 4L24 2V0H0V2Z%22 fill=%22white%22/%3E%3C/svg%3E');"></div>
+                </h1>
+                <div class="w-32 h-32 border-2 border-white/30 rounded-full flex items-center justify-center transform rotate-12">
+                    <div class="w-28 h-28 border-2 border-white rounded-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                        <span class="text-4xl">복</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xl md:text-2xl mb-12">Experience Authentic Korean Cuisine</p>
+            <a href="#menu" class="bg-red-800/90 backdrop-blur-sm text-white px-12 py-4 rounded-lg hover:bg-red-700 transition-colors border border-white/20 shadow-lg">
+                View Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden korean-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-red-50/80 to-white/90"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16 relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-4 w-40 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-20 h-[2px] bg-red-800"></div>
+                
+                <h2 class="text-5xl md:text-6xl font-bold text-red-800 mb-4">우리의 이야기</h2>
+                <p class="text-2xl text-gray-700 mb-2">"Our Story"</p>
+                
+                <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-40 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-20 h-[2px] bg-red-800"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
+                    <p class="text-gray-700 text-xl leading-relaxed mb-8">
+                        At Hanbok Flame, we invite you on a culinary journey through the heart of Korea. Our master chefs blend centuries-old traditions with contemporary flair, crafting dishes that ignite the senses and warm the soul.
+                    </p>
+                    <p class="text-gray-700 text-xl leading-relaxed mb-8">
+                        Every bite tells a story of passion, heritage, and the vibrant spirit of Korean cuisine. Join us for an unforgettable dining experience where authenticity meets elegance.
+                    </p>
+                    <div class="flex items-center justify-center space-x-6 mt-12">
+                        <div class="w-16 h-[1px] bg-red-800"></div>
+                        <div class="w-3 h-3 border-2 border-red-800 transform rotate-45"></div>
+                        <div class="w-16 h-[1px] bg-red-800"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-4 w-40 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-20 h-[2px] bg-red-800"></div>
+                
+                <h2 class="text-5xl md:text-6xl font-bold text-red-800 mb-4">메뉴</h2>
+                <p class="text-2xl text-gray-700 mb-2">"Our Menu"</p>
+                <p class="text-lg text-gray-600 italic">A Symphony of Traditional Korean Flavors</p>
+                
+                <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-40 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-20 h-[2px] bg-red-800"></div>
+            </div>
+            
+            <!-- Appetizers -->
+            <div class="mb-16">
+                <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-red-800 mb-2">에피타이저</h3>
+                        <p class="text-xl text-gray-700">"Appetizers"</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">육회</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Beef Tartare with Asian Pear and Quail Egg"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱150.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Tender beef tartare paired with crisp Asian pear and topped with a delicate quail egg.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">김치 아란치니</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Kimchi Arancini with Gochujang Aioli"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱200.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Crispy fried rice balls infused with spicy kimchi, served with a tangy gochujang aioli.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">김 말이</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Crispy Seaweed Rolls with Shitake and Pickled Radish"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱130.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Crunchy seaweed rolls filled with earthy shiitake mushrooms and tangy pickled radish.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">연근 칩스</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Lotus Root Chips with Sesame Salt"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱120.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Thinly sliced lotus root chips lightly dusted with toasted sesame salt.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">갈비 만두</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Galbi Mandu with Soy-Ginger Glaze"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱250.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Savory galbi beef dumplings glazed with a sweet soy-ginger sauce.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soups -->
+            <div class="mb-16">
+                <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-red-800 mb-2">국물 요리</h3>
+                        <p class="text-xl text-gray-700">"Soups"</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">된장국</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Doenjang Broth with Tofu Clouds"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱100.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A savory fermented soybean broth with delicate tofu ribbons floating like clouds.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">들깨 냉국수</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Chilled Perilla Noodle Soup"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱320.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Refreshing cold noodle soup infused with aromatic perilla leaves, perfect for warm days.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">오이 미역국</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Spicy Cucumber & Seaweed Soup"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱160.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A spicy and tangy soup featuring crisp cucumbers and nutritious seaweed.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">배 김치 콘소메</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Korean Pear & Kimchi Consommé"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱200.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A clear, flavorful consommé combining the sweetness of Korean pear with the tang of kimchi.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">잣국</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Silken Tofu with Pine Nut Soup"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱170.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Smooth silken tofu served in a rich, nutty pine nut broth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dishes -->
+            <div class="mb-16">
+                <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-red-800 mb-2">주요 요리</h3>
+                        <p class="text-xl text-gray-700">"Main Dishes"</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">갈비구이</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Grilled Short Rib Galbi with Apple Soy Glaze"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱350.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Tender grilled short ribs glazed with a sweet and savory apple soy sauce.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">고추장 광어구이</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Gochujang Glazed Halibut with Radish Purée"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱450.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Pan-seared halibut glazed with spicy gochujang, served with a smooth radish purée.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">김치 리조또</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Kimchi Risotto with Toasted Sesame"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱270.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Creamy risotto infused with spicy kimchi and topped with toasted sesame seeds.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">장조림 비빔밥</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Jangjorim Bibimbap with Quail Egg & Namul"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱300.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A hearty bowl of soy-braised beef, quail egg, and seasoned vegetables over rice.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">트러플 비빔밥</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Bibimbap with Truffle Egg Yolk and Gold Leaf"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱300.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Luxurious bibimbap topped with a rich truffle egg yolk and delicate gold leaf.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="mb-16">
+                <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-red-800 mb-2">디저트</h3>
+                        <p class="text-xl text-gray-700">"Desserts"</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">떡 세트</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Sweet Rice Cake Trio with Bean Paste"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱150.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A delightful trio of traditional rice cakes filled with sweet bean paste.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">흑임자 무스</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Black Sesame Mousse with Yakgwa Crumble"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱120.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Creamy black sesame mousse topped with crunchy traditional yakgwa crumble.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">두유 아이스크림</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Soy Milk Ice Cream with Honeycomb"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱80.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Smooth soy milk ice cream served with sweet honeycomb pieces.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">밤크림 호떡</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Crispy Hotteok with Chestnut Cream"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱410.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Warm, crispy Korean pancakes filled with rich chestnut cream.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div>
+                <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-red-800 mb-2">음료</h3>
+                        <p class="text-xl text-gray-700">"Beverages"</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">수정과 소르베</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Korean Cinnamon Punch Sorbet"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱80.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A refreshing sorbet inspired by the traditional Korean cinnamon punch, Sujeonggwa.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">유자 스파클링 티</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Yuzu-Infused Sparkling Tea"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱160.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Sparkling tea infused with the bright citrus flavor of yuzu.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">오미자 아이스티</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Omija Berry Iced Tea"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱120.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Chilled iced tea brewed with the unique flavor of omija berries.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">보리차</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Roasted Barley Water with Lemon"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱70.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Traditional Korean roasted barley tea served chilled with a hint of lemon.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">유자청 음료</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Honey Citron Iced Elixir"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱60.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">Sweet and tangy iced drink made with honey and citron.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="py-24 relative overflow-hidden korean-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-red-50/80 to-white/90"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16 relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-4 w-40 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-20 h-[2px] bg-red-800"></div>
+                
+                <h2 class="text-5xl md:text-6xl font-bold text-red-800 mb-4">예약하기</h2>
+                <p class="text-2xl text-gray-700 mb-2">"Make a Reservation"</p>
+                
+                <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-40 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-20 h-[2px] bg-red-800"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Reservation Form -->
+                <div class="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-red-800/10">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">성함 / Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">전화번호 / Phone</label>
+                                <input type="tel" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors" placeholder="Your Phone Number">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">날짜 / Date</label>
+                                <input type="date" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">시간 / Time</label>
+                                <input type="time" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-medium mb-2">인원 / Party Size</label>
+                            <select class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors">
+                                <option value="">Select Party Size</option>
+                                <option value="1-2">1-2 People</option>
+                                <option value="3-4">3-4 People</option>
+                                <option value="5-6">5-6 People</option>
+                                <option value="7+">7+ People</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-medium mb-2">특별 요청사항 / Special Requests</label>
+                            <textarea class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors h-24" placeholder="Any special requests or dietary requirements?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-red-800 text-white py-3 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
+                            <span class="text-lg">예약 확인</span>
+                            <span class="text-sm">"Confirm Reservation"</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-red-800/10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 border-2 border-red-800 rounded-full flex items-center justify-center bg-red-50/50">
+                                <span class="text-xl text-red-800">위</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">위치 / Location</h3>
+                                <p class="text-gray-600">123 Korean Street</p>
+                                <p class="text-gray-600">Foodie City, FC 12345</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-red-800/10 pt-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 border-2 border-red-800 rounded-full flex items-center justify-center bg-red-50/50">
+                                    <span class="text-xl text-red-800">시</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">영업 시간 / Hours</h3>
+                                    <p class="text-gray-600">Monday - Friday: 11:00 AM - 10:00 PM</p>
+                                    <p class="text-gray-600">Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-red-800/10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border-2 border-red-800 rounded-full flex items-center justify-center bg-red-50/50">
+                                <span class="text-xl text-red-800">문</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">문의하기 / Contact</h3>
+                                <p class="text-gray-600">Phone: (123) 456-7890</p>
+                                <p class="text-gray-600">Email: info@hanbokflame.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .korean-pattern {
+            background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0L40 20L20 40L0 20L20 0z" fill="%23991b1b" opacity="0.05"/></svg>');
+            background-size: 40px 40px;
+        }
+        .qr-frame {
+            position: relative;
+        }
+        .qr-frame::before, .qr-frame::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #991b1b;
+        }
+        .qr-frame::before {
+            top: -10px;
+            left: -10px;
+            border-right: none;
+            border-bottom: none;
+        }
+        .qr-frame::after {
+            bottom: -10px;
+            right: -10px;
+            border-left: none;
+            border-top: none;
+        }
+    </style>
+
+    <!-- QR Code Section with enhanced Korean styling -->
+    <section class="py-24 relative overflow-hidden korean-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-red-50/80 to-white/90"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <!-- Traditional Korean Border Design -->
+                <div class="text-center mb-16 relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -top-4 w-40 h-[2px] bg-red-800"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-20 h-[2px] bg-red-800"></div>
+                    
+                    <h2 class="text-5xl md:text-6xl font-bold text-red-800 mb-4">디지털 메뉴 스캔</h2>
+                    <p class="text-2xl text-gray-700 mb-2">"Digital Menu Scan"</p>
+                    <p class="text-lg text-gray-600 italic">Where Tradition Meets Technology</p>
+                    
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-40 h-[2px] bg-red-800"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-20 h-[2px] bg-red-800"></div>
+                </div>
+
+                <div class="bg-white/95 backdrop-blur-sm p-16 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+                        <div class="qr-frame bg-white p-8 rounded-2xl shadow-xl">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://example.com/menu" 
+                                alt="Menu QR Code" 
+                                class="w-60 h-60">
+                        </div>
+                        
+                        <div class="md:w-[450px] text-left">
+                            <div class="mb-8 border-l-4 border-red-800 pl-6">
+                                <h3 class="text-3xl font-bold text-red-800 mb-2">간편한 디지털 메뉴</h3>
+                                <p class="text-xl text-gray-600">"Simple Digital Menu"</p>
+                            </div>
+                            
+                            <div class="space-y-8">
+                                <div>
+                                    <h4 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                        <span class="w-3 h-3 border-2 border-red-800 transform rotate-45 mr-4"></span>
+                                        스캔 혜택
+                                        <span class="text-lg text-gray-600 ml-3">"Benefits"</span>
+                                    </h4>
+                                </div>
+                                
+                                <ul class="space-y-6">
+                                    <li class="flex items-start space-x-4">
+                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2"></span>
+                                        <div>
+                                            <p class="text-lg text-gray-800 font-medium">실시간 메뉴 업데이트</p>
+                                            <p class="text-gray-600">"Real-time menu updates"</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-4">
+                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2"></span>
+                                        <div>
+                                            <p class="text-lg text-gray-800 font-medium">일일 스페셜 메뉴</p>
+                                            <p class="text-gray-600">"Daily special offerings"</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-4">
+                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2"></span>
+                                        <div>
+                                            <p class="text-lg text-gray-800 font-medium">편리한 모바일 주문</p>
+                                            <p class="text-gray-600">"Convenient mobile ordering"</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-xl text-gray-800 mb-2">최고의 식사 경험을 위해 디지털 메뉴를 확인하세요</p>
+                    <p class="text-lg text-gray-600 italic">"For the finest dining experience, explore our digital menu"</p>
+                    
+                    <!-- Traditional Korean Decorative Element -->
+                    <div class="mt-8 flex items-center justify-center space-x-6">
+                        <div class="w-16 h-[1px] bg-red-800"></div>
+                        <div class="w-3 h-3 border-2 border-red-800 transform rotate-45"></div>
+                        <div class="w-16 h-[1px] bg-red-800"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Hanbok Flame</h3>
+                <p class="mb-4">Experience authentic Korean cuisine</p>
+                <p class="text-sm text-gray-400">&copy; <script>document.write(new Date().getFullYear())</script> Hanbok Flame. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
