@@ -33,18 +33,6 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <style>
-        @media (max-width: 768px) {
-            .mobile-menu {
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
-        }
-    </style>
-
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-red-800/10">
         <div class="container mx-auto px-4 py-4">
@@ -55,90 +43,42 @@
                     </div>
                     <span class="text-2xl font-bold text-red-800">Hanbok Flame</span>
                 </a>
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center">
                     <div class="h-8 w-px bg-red-800/10 mx-6"></div>
                     <div class="flex space-x-2">
                         <a href="#" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Home</a>
-                        <a href="#menu" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Menu</a>
+                        <a href="#menu" class="px-4 py-2 text-gray-7 00 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Menu</a>
                         <a href="#about" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">About</a>
                         <a href="#contact" class="px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Contact</a>
                     </div>
                 </div>
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden p-2 rounded-lg hover:bg-red-50/50 transition-colors" onclick="toggleMobileMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 md:hidden">
-            <div class="p-4 border-b border-red-800/10">
-                <button class="p-2 rounded-lg hover:bg-red-50/50 transition-colors float-right" onclick="toggleMobileMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="p-4 space-y-4">
-                <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Home</a>
-                <a href="#menu" class="block px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Menu</a>
-                <a href="#about" class="block px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">About</a>
-                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:text-red-800 hover:bg-red-50/50 rounded-lg transition-colors">Contact</a>
             </div>
         </div>
     </nav>
-
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('active');
-        }
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileMenuButton = document.querySelector('.md\\:hidden');
-            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-            }
-        });
-
-        // Close mobile menu when window is resized to desktop view
-        window.addEventListener('resize', function() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-            }
-        });
-    </script>
 
     <!-- Hero Section -->
     <section class="hero-section flex items-center justify-center relative">
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative text-center text-white z-10">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
-                <div class="w-24 md:w-32 h-24 md:h-32 border-2 border-white/30 rounded-full flex items-center justify-center transform -rotate-12">
-                    <div class="w-20 md:w-28 h-20 md:h-28 border-2 border-white rounded-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
-                        <span class="text-3xl md:text-4xl">한</span>
+            <div class="flex items-center justify-center gap-8 mb-6">
+                <div class="w-32 h-32 border-2 border-white/30 rounded-full flex items-center justify-center transform -rotate-12">
+                    <div class="w-28 h-28 border-2 border-white rounded-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                        <span class="text-4xl">한</span>
                     </div>
                 </div>
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold relative my-4 md:my-0">
+                <h1 class="text-5xl md:text-7xl font-bold relative">
                     Hanbok Flame
                     <div class="absolute -top-6 left-0 right-0 h-1 bg-repeat-x opacity-60" style="background-image: url('data:image/svg+xml,%3Csvg width=%2224%22 height=%224%22 viewBox=%220 0 24 4%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M0 2L6 0L12 2L18 0L24 2V4H0V2Z%22 fill=%22white%22/%3E%3C/svg%3E');"></div>
                     <div class="absolute -bottom-6 left-0 right-0 h-1 bg-repeat-x opacity-60" style="background-image: url('data:image/svg+xml,%3Csvg width=%2224%22 height=%224%22 viewBox=%220 0 24 4%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M0 2L6 4L12 2L18 4L24 2V0H0V2Z%22 fill=%22white%22/%3E%3C/svg%3E');"></div>
                 </h1>
-                <div class="w-24 md:w-32 h-24 md:h-32 border-2 border-white/30 rounded-full flex items-center justify-center transform rotate-12">
-                    <div class="w-20 md:w-28 h-20 md:h-28 border-2 border-white rounded-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
-                        <span class="text-3xl md:text-4xl">복</span>
+                <div class="w-32 h-32 border-2 border-white/30 rounded-full flex items-center justify-center transform rotate-12">
+                    <div class="w-28 h-28 border-2 border-white rounded-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                        <span class="text-4xl">복</span>
                     </div>
                 </div>
             </div>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 px-4">Experience Authentic Korean Cuisine</p>
-            <a href="#menu" class="bg-red-800/90 backdrop-blur-sm text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg hover:bg-red-700 transition-colors border border-white/20 shadow-lg text-base sm:text-lg">
+            <p class="text-xl md:text-2xl mb-12">Experience Authentic Korean Cuisine</p>
+            <a href="#menu" class="bg-red-800/90 backdrop-blur-sm text-white px-12 py-4 rounded-lg hover:bg-red-700 transition-colors border border-white/20 shadow-lg">
                 View Menu
             </a>
         </div>
@@ -182,7 +122,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 relative">
                 <div class="absolute left-1/2 transform -translate-x-1/2 -top-4 w-40 h-[2px] bg-red-800"></div>
-                <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-20 h-[2px] bg-red-800"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-20 h-[2px] bg red-800"></div>
                 
                 <h2 class="text-5xl md:text-6xl font-bold text-red-800 mb-4">메뉴</h2>
                 <p class="text-2xl text-gray-700 mb-2">"Our Menu"</p>
@@ -191,7 +131,7 @@
                 <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-40 h-[2px] bg-red-800"></div>
                 <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-20 h-[2px] bg-red-800"></div>
             </div>
-            
+                    
             <!-- Appetizers -->
             <div class="mb-16">
                 <div class="bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-red-800/10">
@@ -310,7 +250,7 @@
                         </div>
                         <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                             <div class="border-l-2 border-red-800/20 pl-6">
-                                <div class="flex justify-between items-start mb-4">
+                                <div class="flex justify between items-start mb-4">
                                     <div>
                                         <h4 class="text-xl font-semibold text-red-800 mb-1">배 김치 콘소메</h4>
                                         <p class="text-lg text-gray-700 font-bold">"Korean Pear & Kimchi Consommé"</p>
@@ -375,7 +315,7 @@
                                         <h4 class="text-xl font-semibold text-red-800 mb-1">김치 리조또</h4>
                                         <p class="text-lg text-gray-700 font-bold">"Kimchi Risotto with Toasted Sesame"</p>
                                     </div>
-                                    <p class="text-red-800 font-bold text-xl">₱270.00</p>
+                                    <p class="text red-800 font-bold text-xl">₱270.00</p>
                                 </div>
                                 <p class="text-gray-600 leading-relaxed">Creamy risotto infused with spicy kimchi and topped with toasted sesame seeds.</p>
                             </div>
@@ -464,6 +404,18 @@
                                 <p class="text-gray-600 leading-relaxed">Warm, crispy Korean pancakes filled with rich chestnut cream.</p>
                             </div>
                         </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">수정과 소르베</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Korean Cinnamon Punch Sorbet"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱80.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A refreshing sorbet inspired by the traditional Korean cinnamon punch, Sujeonggwa.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -480,19 +432,7 @@
                             <div class="border-l-2 border-red-800/20 pl-6">
                                 <div class="flex justify-between items-start mb-4">
                                     <div>
-                                        <h4 class="text-xl font-semibold text-red-800 mb-1">수정과 소르베</h4>
-                                        <p class="text-lg text-gray-700 font-bold">"Korean Cinnamon Punch Sorbet"</p>
-                                    </div>
-                                    <p class="text-red-800 font-bold text-xl">₱80.00</p>
-                                </div>
-                                <p class="text-gray-600 leading-relaxed">A refreshing sorbet inspired by the traditional Korean cinnamon punch, Sujeonggwa.</p>
-                            </div>
-                        </div>
-                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                            <div class="border-l-2 border-red-800/20 pl-6">
-                                <div class="flex justify-between items-start mb-4">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-red-800 mb-1">유자 스파클링 티</h4>
+                                        <h4 class="text-xl font-semibold text red-800 mb-1">유자 스파클링 티</h4>
                                         <p class="text-lg text-gray-700 font-bold">"Yuzu-Infused Sparkling Tea"</p>
                                     </div>
                                     <p class="text-red-800 font-bold text-xl">₱160.00</p>
@@ -536,6 +476,18 @@
                                 <p class="text-gray-600 leading-relaxed">Sweet and tangy iced drink made with honey and citron.</p>
                             </div>
                         </div>
+                        <div class="p-8 menu-card bg-white/80 rounded-2xl shadow-lg border border-red-800/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="border-l-2 border-red-800/20 pl-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-red-800 mb-1">계피 곶감식초</h4>
+                                        <p class="text-lg text-gray-700 font-bold">"Cinnamon Persimon Punch"</p>
+                                    </div>
+                                    <p class="text-red-800 font-bold text-xl">₱60.00</p>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">A sweet Korean drink made from dried persimmons, cinnamon sticks, and ginger.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -568,7 +520,7 @@
                             </div>
                             <div>
                                 <label class="block text-gray-700 text-sm font-medium mb-2">전화번호 / Phone</label>
-                                <input type="tel" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors" placeholder="Your Phone Number">
+                                <input type="tel" class="w-full px-4 py-2 border border-gray 200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors" placeholder="Your Phone Number">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -577,7 +529,7 @@
                                 <input type="date" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors">
                             </div>
                             <div>
-                                <label class="block text-gray-700 text-sm font-medium mb-2">시간 / Time</label>
+                                <label class="block text-gray-7 00 text-sm font-medium mb-2">시간 / Time</label>
                                 <input type="time" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-800/20 focus:border-red-800 transition-colors">
                             </div>
                         </div>
@@ -694,49 +646,49 @@
                     <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-20 h-[2px] bg-red-800"></div>
                 </div>
 
-                <div class="bg-white/95 backdrop-blur-sm p-6 sm:p-8 md:p-16 rounded-3xl shadow-2xl border border-red-800/10">
-                    <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
-                        <div class="qr-frame bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://websitenijam.github.io/Hanbok-Flame/" 
-                                alt="Hanbok Flame Menu QR Code" 
-                                class="w-48 h-48 sm:w-56 sm:h-56 md:w-60 md:h-60">
+                <div class="bg-white/95 backdrop-blur-sm p-16 rounded-3xl shadow-2xl border border-red-800/10">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+                        <div class="qr-frame bg-white p-8 rounded-2xl shadow-xl">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://example.com/menu"
+                                 alt="Menu QR Code"
+                                 class="w-60 h-60">
                         </div>
                         
-                        <div class="w-full md:w-[450px] text-left">
-                            <div class="mb-6 md:mb-8 border-l-4 border-red-800 pl-4 md:pl-6">
-                                <h3 class="text-2xl md:text-3xl font-bold text-red-800 mb-2">간편한 디지털 메뉴</h3>
-                                <p class="text-lg md:text-xl text-gray-600">"Simple Digital Menu"</p>
+                        <div class="md:w-[450px] text-left">
+                            <div class="mb-8 border-l-4 border-red-800 pl-6">
+                                <h3 class="text-3xl font-bold text-red-800 mb-2">간편한 디지털 메뉴</h3>
+                                <p class="text-xl text-gray-600">"Simple Digital Menu"</p>
                             </div>
                             
                             <div class="space-y-8">
-                                <div class="mb-6">
-                                    <h4 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4 flex items-center">
-                                        <span class="w-2.5 md:w-3 h-2.5 md:h-3 border-2 border-red-800 transform rotate-45 mr-3 md:mr-4"></span>
+                                <div>
+                                    <h4 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                                        <span class="w-3 h-3 border-2 border-red-800 transform rotate-45 mr-4"></span>
                                         스캔 혜택
-                                        <span class="text-base md:text-lg text-gray-600 ml-2 md:ml-3">"Benefits"</span>
+                                        <span class="text-lg text-gray-600 ml-3">"Benefits"</span>
                                     </h4>
                                 </div>
                                 
-                                <ul class="space-y-4 md:space-y-6">
-                                    <li class="flex items-start space-x-3 md:space-x-4">
-                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2 flex-shrink-0"></span>
+                                <ul class="space-y-6">
+                                    <li class="flex items-start space-x-4">
+                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2"></span>
                                         <div>
-                                            <p class="text-base md:text-lg text-gray-800 font-medium">실시간 메뉴 업데이트</p>
-                                            <p class="text-sm md:text-base text-gray-600">"Real-time menu updates"</p>
+                                            <p class="text-lg text-gray-800 font-medium">실시간 메뉴 업데이트</p>
+                                            <p class="text-gray-600">"Real-time menu updates"</p>
                                         </div>
                                     </li>
-                                    <li class="flex items-start space-x-3 md:space-x-4">
-                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2 flex-shrink-0"></span>
+                                    <li class="flex items-start space-x-4">
+                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2"></span>
                                         <div>
-                                            <p class="text-base md:text-lg text-gray-800 font-medium">일일 스페셜 메뉴</p>
-                                            <p class="text-sm md:text-base text-gray-600">"Daily special offerings"</p>
+                                            <p class="text-lg text-gray-800 font-medium">일일 스페셜 메뉴</p>
+                                            <p class="text gray-600">"Daily special offerings"</p>
                                         </div>
                                     </li>
-                                    <li class="flex items-start space-x-3 md:space-x-4">
-                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2 flex-shrink-0"></span>
+                                    <li class="flex items-start space-x-4">
+                                        <span class="w-2 h-2 border-2 border-red-800 transform rotate-45 mt-2"></span>
                                         <div>
-                                            <p class="text-base md:text-lg text-gray-800 font-medium">편리한 모바일 주문</p>
-                                            <p class="text-sm md:text-base text-gray-600">"Convenient mobile ordering"</p>
+                                            <p class="text-lg text-gray-800 font-medium">편리한 모바일 주문</p>
+                                            <p class="text-gray-600">"Convenient mobile ordering"</p>
                                         </div>
                                     </li>
                                 </ul>
